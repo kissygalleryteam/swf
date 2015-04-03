@@ -6,7 +6,7 @@
 
 var Dom = require('dom');
 var FlashUA = require('./swf/ua');
-var swfUrl = './swf/expressInstall.swf';
+var swfUrl = '//g.alicdn.com/kg/swf/0.0.1/swf/expressInstall.swf';
 var OLD_IE = !!window.ActiveXObject,
     TYPE = 'application/x-shockwave-flash',
     CID = 'clsid:d27cdb6e-ae6d-11cf-96b8-444553540000',
@@ -54,7 +54,7 @@ var defaultConfig = {
     /**
      * @ignore
      */
-    expressInstall: require.toUrl(swfUrl),
+    expressInstall: swfUrl,
 
     /**
      * new swf 's url

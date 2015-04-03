@@ -1,4 +1,4 @@
-//! Copyright 2015, kissy-gallery-swf@0.0.1 MIT Licensed, build time: Fri, 03 Apr 2015 05:38:39 GMT 
+//! Copyright 2015, kissy-gallery-swf@0.0.1 MIT Licensed, build time: Fri, 03 Apr 2015 05:41:25 GMT 
 define("kg/swf/0.0.1/index", ["dom"], function(require, exports, module) {
 var dom = require("dom");
 /*
@@ -105,7 +105,7 @@ swfUa = function (exports) {
 _swf_ = function (exports) {
   var Dom = dom;
   var FlashUA = swfUa;
-  var swfUrl = './swf/expressInstall.swf';
+  var swfUrl = '//g.alicdn.com/kg/swf/0.0.1/swf/expressInstall.swf';
   var OLD_IE = !!window.ActiveXObject, TYPE = 'application/x-shockwave-flash', CID = 'clsid:d27cdb6e-ae6d-11cf-96b8-444553540000', FLASHVARS = 'flashvars', EMPTY = '', LT = '<', GT = '>', doc = document, fpv = FlashUA.fpv, fpvGEQ = FlashUA.fpvGEQ, fpvGTE = FlashUA.fpvGTE, OBJECT_TAG = 'object', encode = encodeURIComponent, PARAMS = {
       wmode: EMPTY,
       allowscriptaccess: EMPTY,
@@ -125,7 +125,7 @@ _swf_ = function (exports) {
       seamlesstabbing: EMPTY
     };
   var defaultConfig = {
-    expressInstall: require.toUrl(swfUrl),
+    expressInstall: swfUrl,
     version: '9',
     params: {},
     attrs: {},
