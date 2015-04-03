@@ -1,24 +1,35 @@
 <!doctype html>
 <html>
+
 <body>
-<p>this is swf@1.0.0 demo</p>
-<script src="/mx_modules/modulex-debug.js"></script>
-<script src="/mx_modules/ua-debug.js"></script>
-<script src="/mx_modules/feature-debug.js"></script>
-<script src="/mx_modules/meta.js"></script>
-<script>
-    modulex.config({
-        base: '/mx_modules',
-        packages: {
-            'swf': {
-                filter: isCoverage ? 'coverage' : isBuild ? 'debug' : '',
-                base: isBuild ? '/build/swf' : '/lib/swf'
-            }
-        }
-    });
-    modulex.use('swf',function(swf){
-        //  TODO with swf
-    });
-</script>
+    <p>this is swf@1.0.0 demo</p>
+	<div id="container"></div>
+    <script src="//g.assets.daily.taobao.net/kissy/k/6.0.0/seed-min.js" data-config="{combine:true}"></script>
+    <script>
+        KISSY.use('kg/swf/0.0.1/', function(S, SWF)
+        {
+            var swf = new SWF(
+            {
+                src: 'xx.swf',
+                attrs:
+                {
+                    width: 100
+                },
+                params:
+                {
+                    flashVars:
+                    {
+                        x: 1
+                    }
+                },
+                render: '#container'
+            });
+
+            swf.get('el') // => 对应 swf dom 节点
+
+            swf.callSWF('save', ['a', 1]);
+        });
+    </script>
 </body>
+
 </html>
